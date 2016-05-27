@@ -1,0 +1,67 @@
+.page1 {
+	.no-padding-left {
+		padding-left: 0px;
+	}
+
+	.no-padding-right {
+		padding-right: 0px;
+	}
+	.no-margin-left {
+		margin-left: 0px;
+	}
+
+	.no-margin-right {
+		margin-right: 0px;
+	}
+
+	.month_name {
+		text-align: center;
+		background: #ff0000;
+		border-top-left-radius: 15px;
+		border-top-right-radius: 15px;
+		color: #ffffff;
+	}
+
+	.day_name {
+		text-align: center;
+	}
+
+	.day_number {
+		text-align: center;
+		font-size: 34px;
+	}
+
+	.event_title {
+		padding-left: 10px;
+		padding-top: 0px;
+		margin-top: 0px;
+	}
+	.event_classroom {
+		font-size: 11px;
+		background: #cccccc;
+		padding: 5px;
+		border-radius: 5px;
+		margin: 0px 0px 0px 2px;
+		width: 0px;
+		display: inline;
+		text-align: center;
+		clear: both;
+		text-transform: uppercase;
+		
+	}
+	scroll-content { padding-right: 0px; margin-right: -12px; padding-left: 0px; margin-left: 10px }
+	.date_column { 
+
+		-webkit-box-flex: 0;
+	    -webkit-flex: 0 0 30%;
+	    -ms-flex: 0 0 30%;
+	    flex: 0 0 30%;
+	    max-width: 100px;
+
+	}
+
+	.rounded-border {
+		box-shadow: 1px 1px 1px #CCCCCC;
+		border-radius: 5px;
+	}
+}

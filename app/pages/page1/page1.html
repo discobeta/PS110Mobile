@@ -1,0 +1,43 @@
+<ion-navbar *navbar>
+  <button menuToggle>
+    <ion-icon name="menu"></ion-icon>
+  </button>
+  <ion-title>PS110</ion-title>
+</ion-navbar>
+
+<ion-content padding class="page1">
+
+
+
+  <ion-refresher
+    refreshing-text="refreshing..."
+    refreshing-spinner="circles"
+    pulling-icon="arrow-down"
+    (refresh)="doRefresh($event)"
+    pulling-text="Pull to refresh...">
+    <ion-refresher-content></ion-refresher-content>
+  </ion-refresher>
+
+<ion-card *ngFor="let event of foundEvents" class="no-padding-left no-padding-right no-margin-left no-margin-right">
+  
+  <ion-card-content>
+  <ion-row>
+    
+    <ion-col class="no-padding-left date_column rounded-border">
+      <div class="month_name">{{event.month_name}}</div>
+      <div class="day_number">{{event.day_number}}</div>
+      <div class="day_name">{{event.day_name}}</div>
+    </ion-col> 
+
+    <ion-col class="no-padding-right">
+    <ion-card-title class="event_title">
+      <div *ngFor="let cn of event.classroom" class="event_classroom">{{cn}}</div>
+      <br><br>
+      {{event.title}}
+      </ion-card-title>
+    </ion-col>
+  
+  </ion-row>
+  </ion-card-content>
+</ion-card>
+</ion-content>
