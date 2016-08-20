@@ -1,0 +1,42 @@
+.login {
+	.facebook-login-button { background: #3b5998; font-size: 90%; }
+	.facebook-login-button:hover:not(.disable-hover) { background-color: #8b9dc3; }
+	.facebook-login-button.activated { background-color: #dfe3ee; box-shadow: 0 3px 5px rgba(0, 0, 0, 0.14), 0 3px 5px rgba(0, 0, 0, 0.21);	}
+
+	.default-login-button { background: #986945; font-size: 90%; }
+	.default-login-button:hover:not(.disable-hover) { background-color: #c18754; }
+	.default-login-button.activated { background-color: #4f3d2e; box-shadow: 0 3px 5px rgba(0, 0, 0, 0.14), 0 3px 5px rgba(0, 0, 0, 0.21);	}
+
+	.default-forgot-button { background: #aaaaaa; font-size: 90%; }
+	.default-forgot-button:hover:not(.disable-hover) { background-color: #bbbbbb; }
+	.default-forgot-button.activated { background-color: #cccccc; box-shadow: 0 3px 5px rgba(0, 0, 0, 0.14), 0 3px 5px rgba(0, 0, 0, 0.21);	}
+
+	ion-item {
+		.username { text-transform: lowercase }
+		.logo-image { max-width: 150px; margin: 0 auto; }
+		.inline-icon { margin-top: 5px; }
+		.top-border-rounded { border-top-left-radius: 15px; border-top-right-radius: 15px; }
+		.bottom-border-rounded { border-bottom-left-radius: 15px; border-bottom-right-radius: 15px; }
+		.button-outline { color: #ffffff !important; border-color: #ffffff !important }
+	}
+	background: #000066;
+	color: #ffffff;
+    width: 100%;
+    height: 246px;
+    margin: auto;
+    z-index: 2;
+    position: relative;
+
+
+}
+		.logo-container { text-align: center; }
+
+
+    .toolbar-title {
+    	color: #fff
+    }
+
+
+
+
+

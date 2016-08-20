@@ -1,3 +1,31 @@
-.tutorial {
+.tutorial-content {
+
+	ion-slides {
+	    position: absolute;
+    }
+    ion-slide .slide-image {
+    	width: 100px;
+    }
+	ion-slides {
+		position: absolute;
+	    top: 0%;
+	    font-size: 2.0em;
+	    font-weight: bold;
+	    color: #fff;
+	    text-shadow: 1px 1px 1px #000;
+	    background: #000066;
+	}
+	.slide-description {
+		color: #fff;
+	    text-shadow: 1px 1px 1px #000;
+	}
+	ion-slides .background-image {
+		position: absolute;
+		width: 100%;
+
+		
+	}
+	.swiper-pagination-bullet { background: #fff }
 
 }
+

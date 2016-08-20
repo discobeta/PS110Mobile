@@ -8,36 +8,43 @@
 // App Shared Sass variables belong in app.variables.scss.
 
 @import "../pages/page1/page1";
-@import "../pages/page2/page2";
-@import "../pages/page3/page3";
 @import "../pages/tutorial/tutorial";
 @import "../pages/login/login";
 @import "../pages/signup/signup";
+@import "../pages/details/details";
 
 
-.login {
-	.facebook-login-button { background: #3b5998 }
-	.facebook-login-button:hover:not(.disable-hover) { background-color: #8b9dc3; }
-	.facebook-login-button.activated { background-color: #dfe3ee; box-shadow: 0 3px 5px rgba(0, 0, 0, 0.14), 0 3px 5px rgba(0, 0, 0, 0.21);	}
+.toolbar-background { background: #000066; color: #fff }
+.bar-button-default { color: #fff }
 
-	.default-login-button { background: #986945 }
-	.default-login-button:hover:not(.disable-hover) { background-color: #c18754; }
-	.default-login-button.activated { background-color: #4f3d2e; box-shadow: 0 3px 5px rgba(0, 0, 0, 0.14), 0 3px 5px rgba(0, 0, 0, 0.21);	}
+.username { text-transform: lowercase }
+.logo-container { text-align: center; }
+.logo-image { max-width: 150px; margin: 0 auto; }
+.inline-icon { margin-top: 5px; }
+.top-border-rounded { border-top-left-radius: 15px; border-top-right-radius: 15px; }
+.bottom-border-rounded { border-bottom-left-radius: 15px; border-bottom-right-radius: 15px; }
+.button-outline { color: #ffffff !important; border-color: #ffffff !important }
 
-	.default-forgot-button { background: #aaaaaa }
-	.default-forgot-button:hover:not(.disable-hover) { background-color: #bbbbbb; }
-	.default-forgot-button.activated { background-color: #cccccc; box-shadow: 0 3px 5px rgba(0, 0, 0, 0.14), 0 3px 5px rgba(0, 0, 0, 0.21);	}
-
+.no-padding-bottom {
+	padding-bottom: 0px;
 }
-
-.login {
-	background: #000066 !important;
-	color: #FFFFFF;
+.no-padding-top {
+	padding-top: 0px;
 }
+	.no-padding-left {
+		padding-left: 0px;
+	}
 
-scroll-content {
-	overflow: hidden
-}
+	.no-padding-right {
+		padding-right: 0px;
+	}
+	.no-margin-left {
+		margin-left: 0px;
+	}
+
+	.no-margin-right {
+		margin-right: 0px;
+	}
 
 .text-center {
 	text-align: center;
@@ -54,11 +61,3 @@ scroll-content {
 .no-padding-right {
 	padding-right: 0px;
 }
-
-.username { text-transform: lowercase }
-.logo-container { text-align: center; }
-.logo-image { max-width: 150px; margin: 0 auto; }
-.inline-icon { margin-top: 5px; }
-.top-border-rounded { border-top-left-radius: 15px; border-top-right-radius: 15px; }
-.bottom-border-rounded { border-bottom-left-radius: 15px; border-bottom-right-radius: 15px; }
-.button-outline { color: #ffffff !important; border-color: #ffffff !important }

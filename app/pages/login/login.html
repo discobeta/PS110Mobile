@@ -10,37 +10,37 @@
 
 <ion-content padding class="login">
 
-<div class="logo-container"><img src="img/logo-white.png" class="logo-image"/></div>
+  <div class="logo-container"><img src="img/logo-white.png" class="logo-image"/></div>
 
-<ion-item>
-  <ion-label> <ion-icon name="ios-mail-outline" class="inline-icon"></ion-icon> </ion-label>
-  <ion-input type="email" tabindex="1" placeholder="Email Address" class="username" [value]="username" (input)="username = $event.target.value"></ion-input>
-</ion-item>
+  <ion-item>
+    <ion-label> <ion-icon name="ios-mail-outline" class="inline-icon"></ion-icon> </ion-label>
+    <ion-input type="email" tabindex="1" placeholder="Email Address" class="username" [value]="username" (input)="username = $event.target.value"></ion-input>
+  </ion-item>
 
-<ion-item>
-  <ion-label> <ion-icon name="ios-lock-outline" class="inline-icon"></ion-icon> </ion-label>
-  <ion-input type="password" tabindex="2" placeholder="Password" [value]="password" (input)="password = $event.target.value"></ion-input>
-</ion-item>
+  <ion-item>
+    <ion-label> <ion-icon name="ios-lock-outline" class="inline-icon"></ion-icon> </ion-label>
+    <ion-input type="password" tabindex="2" placeholder="Password" [value]="password" (input)="password = $event.target.value"></ion-input>
+  </ion-item>
 
-<ion-row>
-  <ion-col class="no-padding-left">
-    <button block type="submit" class="default-forgot-button" (click)="forgotPassword()">Forgot Password</button>
-  </ion-col>
-  <ion-col class="no-padding-right">
-    <button tabindex="3" block type="submit" class="default-login-button" (click)="formLogin()">Login</button>
-  </ion-col>
-</ion-row>
-<ion-row>
-  <ion-col class="no-padding-left no-padding-right no-padding-top no-margin-top">
-    <button block type="submit" [navPush]="pushPage" class="facebook-login-button" (click)="facebookLogin()"><ion-icon name="logo-facebook"></ion-icon> Log in with Facebook</button>        
-  </ion-col>
-</ion-row>
+  <ion-row>
+    <ion-col class="no-padding-left">
+      <button block type="submit" class="default-forgot-button no-padding-bottom" (click)="forgotPassword()">Forgot Password</button>
+    </ion-col>
+    <ion-col class="no-padding-right">
+      <button tabindex="3" block type="submit" class="default-login-button no-padding-bottom" (click)="formLogin()">Login</button>
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col class="no-padding-left no-padding-right no-padding-top no-padding-top">
+      <button block type="submit" [navPush]="pushPage" class="facebook-login-button" (click)="facebookLogin()"><ion-icon name="logo-facebook"></ion-icon> Log in with Facebook</button>        
+    </ion-col>
+  </ion-row>
 
- <div class="signup-links">
-	<ion-row> <ion-col class="text-center"> Don't Have a PS110 Account? </ion-col> </ion-row>
-	<ion-row>
-	   <ion-col class="no-padding-left no-padding-right"><div><button block type="submit" class="default-login-button" (click)="signupPage()">Sign Up</button>  </div></ion-col>
-	</ion-row>
- </div>
+  <div class="signup-links">
+  <ion-row> <ion-col class="text-center"> Don't Have a PS110 Account? </ion-col> </ion-row>
+  <ion-row>
+     <ion-col class="no-padding-left no-padding-right"><div><button block outline type="submit" (click)="signupPage()">Sign Up</button>  </div></ion-col>
+  </ion-row>
+  </div>
 
 </ion-content>

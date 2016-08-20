@@ -4,24 +4,24 @@
   See http://ionicframework.com/docs/v2/components/#navigation for more info on
   Ionic pages and navigation.
 -->
-<ion-navbar *navbar>
+<ion-navbar class="tutorial-navbar" *navbar>
   <ion-buttons end *ngIf="showSkip">
     <button (click)="startApp()" primary>Skip</button>
   </ion-buttons>
 </ion-navbar>
 
-<ion-content>
+<ion-content class="tutorial-content">
+
   <ion-slides pager (slideChangeStart)="onSlideChangeStart($event)">
+    <img [src]="backimg" class="background-image">
     <ion-slide *ngFor="let slide of slides">
       <img [src]="slide.image" class="slide-image"/>
       <h2 class="slide-title" [innerHTML]="slide.title"></h2>
-      <p [innerHTML]="slide.description"></p>
+      <p class="slide-description" [innerHTML]="slide.description"></p>
     </ion-slide>
     <ion-slide>
-      <ion-toolbar>
-      </ion-toolbar>
-      <img src="img/redhat.png" class="slide-image"/>
-      <h2 class="slide-title">Ready to Play?</h2>
+      <img src="img/logo.png" class="slide-image"/>
+      <h2 class="slide-title">Ready to Start?</h2>
       <button large clear (click)="startApp()">
         Continue
         <ion-icon name="arrow-forward"></ion-icon>

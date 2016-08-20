@@ -4,7 +4,6 @@ import {StatusBar} from 'ionic-native';
 import {ListPage} from './pages/list/list';
 import {Page1} from './pages/page1/page1';
 import {TutorialPage} from './pages/tutorial/tutorial';
-import {TabsPage} from './pages/tabs/tabs';
 import {LoginPage} from './pages/login/login';
 import {SignupPage} from './pages/signup/signup';
 import {SignoutPage} from './pages/signout/signout'
@@ -18,14 +17,20 @@ export class MyApp {
 
   rootPage: any = this.checkPreviousAuthorization()
 
-  pages: Array<{title: string, component: any}>
+  pages: Array<{title: string, component: any, icon: any}>
+
+  title: string
+  icon: string
+  component: any
+
+
   constructor(private platform: Platform) {
 
     this.pages = [
-      { title: 'Tutorial', component: TutorialPage },
-      { title: 'Settings', component: ListPage },
-      { title: 'Sign Out', component: SignoutPage }
-    ];
+      { title: 'Tutorial', icon: 'help-buoy', component: TutorialPage },
+      { title: 'Class Preferences', icon: 'ios-school', component: ListPage },
+      { title: 'Sign Out', icon: 'ios-log-out', component: SignoutPage }
+    ]; 
 
     this.platform = platform
     this.initializeApp()
@@ -42,18 +47,28 @@ export class MyApp {
   checkPreviousAuthorization(): void { 
     console.log('checkPreviousAuthorization')
     console.log(window.localStorage.getItem('username'))
-    if((window.localStorage.getItem('username') === "undefined" || window.localStorage.getItem('username') === null) && 
+    if((window.localStorage.getItem('username') === "undefined" || window.localStorage.getItem('username') === null) || 
        (window.localStorage.getItem('token') === "undefined" || window.localStorage.getItem('token') === null)) {
-      return LoginPage
+      return TutorialPage
     } else {
-      return TabsPage
+      return Page1 // later change to TutorialPage
     }
   }  
 
   openPage(page) {
-    // Reset the content nav to have just this page
-    // we wouldn't want the back button to show in this scenario
- 
-    this.nav.setRoot(page.component);
+
+    //this.nav.setRoot(page).then(() =>{
+    //  this.nav.popToRoot();
+    //});
+
+    this.nav.push(page.component)
+    //this.nav.setRoot(page);
+      //this.nav.setRoot(page.component)
+       //Get the menu navigation component
+  //let nav = this.app.getComponent('nav'); 
+  //this.menu.close();
+        //set the navigation root page as the page choosed
+  //nav.setRoot(page);
+
   }
 }

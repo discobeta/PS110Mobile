@@ -1,4 +1,6 @@
 .page1 {
+	
+
 	.no-padding-left {
 		padding-left: 0px;
 	}
@@ -31,14 +33,10 @@
 		font-size: 34px;
 	}
 
-	.event_title {
-		padding-left: 10px;
-		padding-top: 0px;
-		margin-top: 0px;
-	}
+
 	.event_classroom {
 		font-size: 11px;
-		background: #cccccc;
+		background: #CCCCCC;
 		padding: 5px;
 		border-radius: 5px;
 		margin: 0px 0px 0px 2px;
@@ -50,18 +48,34 @@
 		
 	}
 	scroll-content { padding-right: 0px; margin-right: -12px; padding-left: 0px; margin-left: 10px }
+
 	.date_column { 
 
 		-webkit-box-flex: 0;
 	    -webkit-flex: 0 0 30%;
-	    -ms-flex: 0 0 30%;
-	    flex: 0 0 30%;
-	    max-width: 100px;
+	    -ms-flex: 0 0 32%;
+	    flex: 0 0 32%;
+	    max-width: 110px;
 
 	}
 
 	.rounded-border {
 		box-shadow: 1px 1px 1px #CCCCCC;
 		border-radius: 5px;
+	}
+	.event_title {
+		padding-left: 10px;
+		padding-top: 0px;
+		margin-top: 0px;
+		position: relative;
+		height: 90px;
+	}
+	.event_title_title {
+		text-transform: uppercase;margin-top:5px;text-align: right;
+		font-size: 18px;
+		bottom: 0px;
+		right: 0px;
+		position: absolute;
+		height: 25px;
 	}
 }
