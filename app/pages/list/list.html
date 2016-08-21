@@ -1,4 +1,4 @@
-<ion-navbar *navbar>
+<ion-navbar hideBackButton="true" *navbar>
   <button menuToggle>
     <ion-icon name="menu"></ion-icon>
   </button>
@@ -14,9 +14,24 @@
   
     <ion-item *ngFor="let classroom of foundClassrooms">
         <ion-label>{{classroom.name}} - {{classroom.teacher_name}}</ion-label>
-        <ion-toggle ng-value="checkSubscription($event)" (change)="toggleSubscription($event)"></ion-toggle>
+<ion-toggle id="{{classroom.name}}" [ngModel]="checkSubscription(classroom.name)" (change)="toggleSubscription($event, classroom.name)"></ion-toggle>
     </ion-item>
 
   </ion-list>
 
+  <ion-row>
+    <ion-col class="">
+      <button block type="submit" class="default-forgot-button" (click)="gotoPage1()">Cancel</button>
+    </ion-col>
+    <ion-col class="">
+      <button block (click)="saveSubscriptions()">SAVE</button>
+    </ion-col>
+  </ion-row>
+
+ <ion-row>
+    
+    <ion-col class="">
+      
+    </ion-col>
+  </ion-row>
 </ion-content>

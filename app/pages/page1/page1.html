@@ -1,8 +1,10 @@
+
 <ion-navbar *navbar>
   <button menuToggle>
     <ion-icon name="menu"></ion-icon>
   </button>
-  <ion-title>PS110</ion-title>
+  <ion-title> <img src="img/logo-white.png" style="width: 50px" /> </ion-title>
+  
 </ion-navbar>
 
 <ion-content padding class="page1">
@@ -17,8 +19,7 @@
     pulling-text="Pull to refresh...">
     <ion-refresher-content></ion-refresher-content>
   </ion-refresher>
-
-<ion-card *ngFor="let event of foundEvents" class="no-padding-left no-padding-right no-margin-left no-margin-right">
+<ion-card *ngFor="let event of foundEvents" (click)="viewEventDetails(event.id,event.month_name,event.day_number,event.day_name,event.title,event.description,event.location,event.event_date,event.event_length,event.classroom)" class="no-padding-left no-padding-right no-margin-left no-margin-right">
   
   <ion-card-content>
   <ion-row>
@@ -32,8 +33,11 @@
     <ion-col class="no-padding-right">
     <ion-card-title class="event_title">
       <div *ngFor="let cn of event.classroom" class="event_classroom">{{cn}}</div>
-      <br><br>
-      {{event.title}}
+      
+      <div class="event_title_title">
+        {{event.title}}
+      </div>
+
       </ion-card-title>
     </ion-col>
   

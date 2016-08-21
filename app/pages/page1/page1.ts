@@ -1,7 +1,10 @@
-import {Page, NavController} from 'ionic-angular';
+import {IonicApp, Page, NavController, Events} from 'ionic-angular';
 import {EventData} from '../../providers/event-data/event-data'
 import {Dialogs} from 'ionic-native'
 import {SignoutPage} from '../../pages/signout/signout';
+import {DetailsPage} from '../../pages/details/details';
+import {TutorialPage} from '../../pages/tutorial/tutorial';
+import {ListPage} from '../../pages/list/list';
 
 
 @Page({
@@ -9,13 +12,44 @@ import {SignoutPage} from '../../pages/signout/signout';
   providers: [[EventData]]
 })
 export class Page1 {
-  constructor(private _eventService: EventData, private nav: NavController) {
+
+  pages: Array<{title: string, component: any, icon: any}>
+  title: string
+  icon: string
+  component: any
+
+  constructor(app: IonicApp, private _eventService: EventData, private nav: NavController, private events: Events) {
+    this.listenToEvents()
+
+    this.pages = [
+      { title: 'Tutorial', icon: 'help-buoy', component: TutorialPage },
+      { title: 'Class Preferences', icon: 'ios-school', component: ListPage },
+      { title: 'Sign Out', icon: 'ios-log-out', component: SignoutPage }
+    ]; 
 
   }
+
+//    this.platform = platform
+//    this.initializeApp()
+//    this.checkPreviousAuthorization()
+
   public foundEvents;
+
+  // we listen to refresh calls from other pages, like list page
+  listenToEvents() {
+    console.log('listening to events')
+    this.events.subscribe('reloadPage1', () => {
+      this.refreshEvents()
+    });
+  }
+
+  viewEventDetails(id,month_name,day_number,day_name,title,description,location,event_date,event_length,classroom) {
+    this.nav.push(DetailsPage, { id: id, month_name: month_name, day_number: day_number, day_name: day_name,title: title, description: description, location: location,event_date: event_date,event_length:event_length,classroom:classroom });
+  }
 
   onPageWillEnter() {
   	console.log('page enter');
+    //this.nav.setRoot(this)
   	this.refreshEvents()
   }
 

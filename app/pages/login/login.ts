@@ -1,8 +1,12 @@
-import {Page, NavController, NavParams, ViewController} from 'ionic-angular';
+import {Page, NavController, NavParams, ViewController, MenuController, Events} from 'ionic-angular';
 import {UserData} from '../../providers/user-data/user-data'
-import {TabsPage} from '../tabs/tabs';
 import {SignupPage} from '../signup/signup';
 import {Dialogs} from 'ionic-native'
+import {Page1} from '../page1/page1';
+import {TutorialPage} from '../../pages/tutorial/tutorial';
+import {ListPage} from '../../pages/list/list';
+import {SignoutPage} from '../../pages/signout/signout';
+
 
 @Page({
   templateUrl: 'build/pages/login/login.html',
@@ -11,9 +15,27 @@ import {Dialogs} from 'ionic-native'
 
 export class LoginPage {
 
-  constructor(private nav: NavController, private _service: UserData, private params: NavParams, private viewCtrl: ViewController) {
-    this.nav = nav
+  pages: Array<{title: string, component: any, icon: any}>
+  title: string
+  icon: string
+  component: any
 
+  constructor(private events: Events, private nav: NavController, private _service: UserData, private params: NavParams, private viewCtrl: ViewController, public menu: MenuController) {
+    this.nav = nav
+    this.menu = menu
+    this.subscribeEvents()
+    this.pages = [
+      { title: 'Tutorial', icon: 'help-buoy', component: TutorialPage },
+      { title: 'Class Preferences', icon: 'ios-school', component: ListPage },
+      { title: 'Sign Out', icon: 'ios-log-out', component: SignoutPage }
+    ]; 
+  }
+
+  subscribeEvents() {
+    console.log('listening to events on login')
+    this.events.subscribe('user:facebookSignup', () => {
+      this.facebookLogin()
+    });
   }
 
   public userEmailAddress: string
@@ -27,7 +49,7 @@ export class LoginPage {
             if (data.token) {
                 window.localStorage.setItem('username', this.username)
                 window.localStorage.setItem('token', data.token)
-                this.nav.push(TabsPage)
+                this.nav.setRoot(Page1)
             }
           },
           err => {
@@ -49,7 +71,7 @@ export class LoginPage {
        (result.id === "undefined" || result.id === null) ||
        (response.authResponse.accessToken === "undefined" || response.authResponse.accessToken === null)) {
                   // we post it to api and get  token in return if the information is valid
-                  alert('not enough params for fb login');
+                  //alert('not enough params for fb login');
                 } else {
                   console.log('response.authResponse.accessToken' + response.authResponse.accessToken)
                   this_ref._service.facebook_auth(result.email,result.id,response.authResponse.accessToken).subscribe(
@@ -95,11 +117,11 @@ export class LoginPage {
 
   tabsPage(){
     console.log('called tabs page')
-    this.nav.push(TabsPage);
+    this.nav.setRoot(Page1);
     window.location.reload(true)
   }
-  onPageWillEnter() {
-
+  onPageDidEnter() {
+    this.menu.enable(false);
   }
 
 }

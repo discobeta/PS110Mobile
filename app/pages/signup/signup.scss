@@ -1,0 +1,14 @@
+.signup {
+	.facebook-login-button { background: #3b5998 }
+	.facebook-login-button:hover:not(.disable-hover) { background-color: #8b9dc3; }
+	.facebook-login-button.activated { background-color: #dfe3ee; box-shadow: 0 3px 5px rgba(0, 0, 0, 0.14), 0 3px 5px rgba(0, 0, 0, 0.21);	}
+
+	.default-login-button { background: #986945 }
+	.default-login-button:hover:not(.disable-hover) { background-color: #c18754; }
+	.default-login-button.activated { background-color: #4f3d2e; box-shadow: 0 3px 5px rgba(0, 0, 0, 0.14), 0 3px 5px rgba(0, 0, 0, 0.21);	}
+
+	.default-forgot-button { background: #aaaaaa }
+	.default-forgot-button:hover:not(.disable-hover) { background-color: #bbbbbb; }
+	.default-forgot-button.activated { background-color: #cccccc; box-shadow: 0 3px 5px rgba(0, 0, 0, 0.14), 0 3px 5px rgba(0, 0, 0, 0.21);	}
+
+}
