@@ -37,7 +37,7 @@ export class SignupPage {
                 window.localStorage.setItem('username', this.username)
                 window.localStorage.setItem('token', data.token)
                 // set first subscription to 1
-                window.localStorage.setItem('EVERYONE', true)
+                window.localStorage.setItem('Everyone', true)
                 
                 //this.nav.push(ListPage)
                 //this.nav.push(Page1)

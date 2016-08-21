@@ -13,7 +13,6 @@
 @import "../pages/signup/signup";
 @import "../pages/details/details";
 
-
 .toolbar-background { background: #000066; color: #fff }
 .bar-button-default { color: #fff }
 
@@ -60,4 +59,9 @@
 
 .no-padding-right {
 	padding-right: 0px;
+}
+
+.slide-description { 
+	padding-left: 40px;
+	padding-right: 40px;
 }

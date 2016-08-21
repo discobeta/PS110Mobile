@@ -35,14 +35,14 @@ export class TutorialPage {
     ]; 
     this.slides = [
       {
-        title: "Welcome to <b>PS110 Events</b>",
-        description: "The <b>PS110 Events </b> App is an easy way for our parents to get updates with regards to our school events.",
+        title: "Welcome to P.S. 110: The Florence Nightingale School",
+        description: "<b>PS110 Events</b> is the quickest way to learn about school events",
         image: "img/logo-white.png",
       },
       {
         title: "What's Inside?",
-        description: "<b>PS110 Events</b> features event like school trips, school global events and class specific activities.",
-        image: "img/logo.png",
+        description: "Inside, you will find general school events like Special Holidays, Book Fairs or Pancake Breakfast! Other than general school events, you can subscribe to class specific events to learn about events such as a Class Trip or a Publishing Party.",
+        image: "img/event.png",
       },
       {
         title: "How to use?",

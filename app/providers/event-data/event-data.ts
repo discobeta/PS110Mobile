@@ -22,21 +22,21 @@ export class EventData {
       console.log('called subscribeClassroom'+classroom_id);
       let headers = new Headers({ 'Content-Type': 'application/json', 'Authorization': 'JWT ' + window.localStorage.getItem('token') });
       let options = new RequestOptions({ headers: headers });
-      return this.http.get('http://192.168.1.18:8000/api/classrooms/'+classroom_id+'/subscribe/?format=json', options);
+      return this.http.get('http://ps110.org/api/classrooms/'+classroom_id+'/subscribe/?format=json', options);
   }
 
   unsubscribeClassroom(classroom_id){
       console.log('called unsubscribeClassroom'+classroom_id);
       let headers = new Headers({ 'Content-Type': 'application/json', 'Authorization': 'JWT ' + window.localStorage.getItem('token') });
       let options = new RequestOptions({ headers: headers });
-      return this.http.get('http://192.168.1.18:8000/api/classrooms/'+classroom_id+'/unsubscribe/?format=json', options);
+      return this.http.get('http://ps110.org/api/classrooms/'+classroom_id+'/unsubscribe/?format=json', options);
   } 
 
   getClassrooms() {
       console.log('called getClasses');
       let headers = new Headers({ 'Content-Type': 'application/json', 'Authorization': 'JWT ' + window.localStorage.getItem('token') });
       let options = new RequestOptions({ headers: headers });
-      return this.http.get('http://192.168.1.18:8000/api/classrooms/?format=json', options)
+      return this.http.get('http://ps110.org/api/classrooms/?format=json', options)
           .map(res => res)
           .catch(this.handleEventFetchError);
   }
@@ -45,7 +45,7 @@ export class EventData {
       console.log('called getEventDetails using token ' + window.localStorage.getItem('token'));
       let headers = new Headers({ 'Content-Type': 'application/json', 'Authorization': 'JWT ' + window.localStorage.getItem('token') });
       let options = new RequestOptions({ headers: headers });
-      return this.http.get('http://192.168.1.18:8000/api/events/'+id+'/?format=json', options)
+      return this.http.get('http://ps110.org/api/events/'+id+'/?format=json', options)
           .map(res => res)
           .catch(this.handleEventFetchError);
   }
@@ -54,7 +54,7 @@ export class EventData {
       console.log('called getEvents using token ' + window.localStorage.getItem('token'));
       let headers = new Headers({ 'Content-Type': 'application/json', 'Authorization': 'JWT ' + window.localStorage.getItem('token') });
       let options = new RequestOptions({ headers: headers });
-      return this.http.get('http://192.168.1.18:8000/api/events/?format=json', options)
+      return this.http.get('http://ps110.org/api/events/?format=json', options)
           .map(res => res)
           .catch(this.handleEventFetchError);
   }
