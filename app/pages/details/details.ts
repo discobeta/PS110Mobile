@@ -17,8 +17,9 @@ export class DetailsPage {
 	public day_number
 	public description
 	public location
-	public event_date
-	public event_length
+	public start_date
+	public end_date
+	public event_duration
 	public classroom
 	public event_time
 	datetime: string
@@ -32,10 +33,11 @@ export class DetailsPage {
 	this.day_name = navParams.get("day_name")
 	this.description = navParams.get("description")
 	this.location = navParams.get("location")
-	this.event_date = navParams.get("event_date")
-	this.event_length = navParams.get("event_length")
+	this.start_date = navParams.get("start_date")
+	this.end_date = navParams.get("end_date")
+	this.event_duration = navParams.get("event_duration")
 	this.classroom = navParams.get("classroom")
-	var datetime = this.event_date
+	var datetime = this.start_date
 	var time = datetime.split('T')
 	this.event_time = time[1].replace('Z','')
   }

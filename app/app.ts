@@ -56,6 +56,7 @@ export class MyApp {
   }  
 
   openPage(page) {
+    console.log(page)
     this.nav.push(page.component)
 
   }

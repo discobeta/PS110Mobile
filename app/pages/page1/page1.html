@@ -19,7 +19,7 @@
     pulling-text="Pull to refresh...">
     <ion-refresher-content></ion-refresher-content>
   </ion-refresher>
-<ion-card *ngFor="let event of foundEvents" (click)="viewEventDetails(event.id,event.month_name,event.day_number,event.day_name,event.title,event.description,event.location,event.event_date,event.event_length,event.classroom)" class="no-padding-left no-padding-right no-margin-left no-margin-right">
+<ion-card *ngFor="let event of foundEvents" (click)="viewEventDetails(event.id,event.month_name,event.day_number,event.day_name,event.title,event.description,event.location,event.start_date,end_date,event.event_duration,event.classroom)" class="no-padding-left no-padding-right no-margin-left no-margin-right">
   
   <ion-card-content>
   <ion-row>

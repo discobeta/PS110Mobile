@@ -43,8 +43,8 @@ export class Page1 {
     });
   }
 
-  viewEventDetails(id,month_name,day_number,day_name,title,description,location,event_date,event_length,classroom) {
-    this.nav.push(DetailsPage, { id: id, month_name: month_name, day_number: day_number, day_name: day_name,title: title, description: description, location: location,event_date: event_date,event_length:event_length,classroom:classroom });
+  viewEventDetails(id,month_name,day_number,day_name,title,description,location,start_date,end_date,event_duration,classroom) {
+    this.nav.push(DetailsPage, { id: id, month_name: month_name, day_number: day_number, day_name: day_name,title: title, description: description, location: location,start_date: start_date,end_date: end_date,event_duration:event_duration,classroom:classroom });
   }
 
   onPageWillEnter() {
