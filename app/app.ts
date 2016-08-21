@@ -57,5 +57,6 @@ export class MyApp {
 
   openPage(page) {
     this.nav.push(page.component)
+
   }
 }
