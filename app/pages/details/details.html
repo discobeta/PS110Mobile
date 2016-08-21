@@ -26,14 +26,14 @@
                 <i class="icon ion-image" style="font-size: 64px; color: rgb(136, 136, 136); vertical-align: middle;"></i>
             </div>
             <div class="item item-body " id="details-list-item-container2">
+
                 <div id="details-markdown1" style="margin-top:0px;color:#000000;">
-                    <p><ion-icon ios="ios-pin-outline" md="ios-pin-outline"></ion-icon> {{ location }}
-                        <strong><ion-icon ios="ios-time" md="md-time"></ion-icon> {{ event_time }}</strong>
 
-                        <strong><ion-icon ios="md-time" md="ios-time"></ion-icon> {{ event_duration }}</strong>
+                    <span *ngIf="location!=='0'"><ion-icon ios="ios-pin-outline" md="ios-pin-outline"></ion-icon> {{ location }}</span>
+                    <span *ngIf="event_time!=='0'"><ion-icon ios="ios-time" md="md-time"></ion-icon> {{ event_time }}</span>
+                    <span *ngIf="event_duration!=='0'"><ion-icon ios="md-time" md="ios-time"></ion-icon> {{ event_duration }}</span>
 
-
-                    </p>
+                    
                 </div>
             </div>
             <ion-item class="item-icon-left positive  " id="details-list-item10">
