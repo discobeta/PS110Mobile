@@ -9,35 +9,33 @@
 </ion-navbar>
 
 <ion-content padding class="details" (ngModel)="eventDetails">
-  <ion-card-content>
-  <ion-row>
-    
+
+        <div class="list card " id="details-card22">
+            <ion-item class="item-avatar  " id="details-list-item9">
     <ion-col class="no-padding-left date_column rounded-border">
       <div class="month_name_blue">{{month_name}}</div>
       <div class="day_number">{{day_number}}</div>
       <div class="day_name">{{day_name}}</div>
     </ion-col> 
+    <br>
+                <h2>{{title}}</h2>
+                <p>{{ description }}</p>
 
-    <ion-col class="no-padding-right">
-    <ion-card-title class="event_title">
-      <div *ngFor="let cn of classroom" class="event_classroom">{{cn}}</div>
-      
-      <h3>&nbsp;&nbsp;{{title}}</h3>
-      </ion-card-title>
-    </ion-col>
-  
-  </ion-row>
-  <ion-row>
-  <ion-col>
-<dl>
-  <dt><ion-icon ios="ios-clock" md="md-clock"></ion-icon> TIME</dt>
-  <dd>{{ event_time }} (For {{ event_length }} hours)<br><br></dd>
-  <dt><ion-icon name="ios-home"></ion-icon> LOCATION</dt>
-  <dd>{{ location }}<br><br></dd>
-  <dt><ion-icon name="ios-information-circle"></ion-icon> DESCRIPTION</dt>
-  <dd>{{ description }}<br><br></dd>
-</dl>
-  </ion-col>
-  </ion-row>
-  </ion-card-content>
+            </ion-item>
+            <div style="margin: 0px; line-height: 250px; text-align: center; background-color: rgb(232, 235, 239);">
+                <i class="icon ion-image" style="font-size: 64px; color: rgb(136, 136, 136); vertical-align: middle;"></i>
+            </div>
+            <div class="item item-body " id="details-list-item-container2">
+                <div id="details-markdown1" style="margin-top:0px;color:#000000;">
+                    <p><ion-icon ios="ios-pin-outline" md="ios-pin-outline"></ion-icon> {{ location }}
+                        <strong><ion-icon ios="ios-time" md="md-time"></ion-icon> {{ event_time }}</strong>
+                    </p>
+                </div>
+            </div>
+            <ion-item class="item-icon-left positive  " id="details-list-item10">
+            This event is for 
+<div *ngFor="let cn of classroom" class="event_classroom">{{cn}}</div>
+            </ion-item>
+        </div>
+
 </ion-content>

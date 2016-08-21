@@ -52,10 +52,10 @@
 	.date_column { 
 
 		-webkit-box-flex: 0;
-	    -webkit-flex: 0 0 30%;
-	    -ms-flex: 0 0 32%;
-	    flex: 0 0 32%;
-	    max-width: 110px;
+	    -webkit-flex: 0 0 32%;
+	    -ms-flex: 0 0 34%;
+	    flex: 0 0 34%;
+	    max-width: 120px;
 
 	}
 
@@ -71,11 +71,7 @@
 		height: 90px;
 	}
 	.event_title_title {
-		text-transform: uppercase;margin-top:5px;text-align: right;
-		font-size: 18px;
-		bottom: 0px;
-		right: 0px;
-		position: absolute;
-		height: 25px;
+		margin-top:5px;
+
 	}
 }

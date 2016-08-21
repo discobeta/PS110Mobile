@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<widget id="com.ionicframework.ps110454433" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
-  <name>ps110</name>
+<widget id="com.aks.ps110" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+  <name>PS110</name>
   <description>An Ionic Framework and Cordova project.</description>
-  <author email="hi@ionicframework" href="http://ionicframework.com/">Ionic Framework Team</author>
+  <author email="ps110@gmail.com" href="http://ps110.org/">PS110 Team</author>
   <content src="index.html"/>
   <access origin="*"/>
   <allow-intent href="http://*/*"/>
@@ -86,5 +86,5 @@
     <variable name="APP_ID" value="1705139013080664"/>
     <variable name="APP_NAME" value="ps110"/>
   </plugin>
-  <icon src="resources/android/icon/drawable-xhdpi-icon.png"/>
+  <icon src="resources/ios/icon/icon-small@3x.png"/>
 </widget>
