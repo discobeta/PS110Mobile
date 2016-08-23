@@ -32,7 +32,7 @@
 
     <ion-col class="no-padding-right">
     <ion-card-title class="event_title">
-      <div *ngFor="let cn of event.classroom" class="event_classroom">{{cn}}</div>
+      <div *ngFor="let cn of event.classroom" class="event_classroom {{cn}}">{{cn}}</div>
       
       <div class="event_title_title">
         {{event.title}}

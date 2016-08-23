@@ -1,5 +1,17 @@
+
+
 .page1 {
-	
+
+	.event_classroom { 
+		background: #ff6666 !important;
+		color: #ffffff;
+	}	
+
+	.event_classroom.EVERYONE {
+		background: #eeeeee !important;
+		color: #333;
+	}
+
 
 	.no-padding-left {
 		padding-left: 0px;
