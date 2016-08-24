@@ -22,7 +22,7 @@ To change the Application Icon or the Splash Screen image, edit the resources/ic
 
 ### Authentication and API
 
-This application authenticates and pulls data from the ps110.org Event and Classroom API. The repository for ps110.org can be found <a href="https://github.com/discobeta/ps110">here</a>.
+This application authenticates and pulls data from the ps110.org Event and Classroom API. The repository for ps110.org can be found <a href="https://github.com/discobeta/ps110">here</a>. In addition to simple user authentication, the app allows Facebook Logins utizliing <a href="http://developer.facebook.com">facebook developers</a>. This is the app ID: 1789356161341649
 
 ### Tutorial Page
 
