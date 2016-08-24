@@ -36,8 +36,8 @@
     "cordova-plugin-dialogs",
     {
       "variables": {
-        "APP_ID": "1705139013080664",
-        "APP_NAME": "ps110"
+        "APP_ID": "1789356161341649",
+        "APP_NAME": "PS 110 Events"
       },
       "locator": "cordova-plugin-facebook4",
       "id": "cordova-plugin-facebook4"
@@ -51,6 +51,6 @@
       "locator": "ios"
     }
   ],
-  "name": "ps110",
-  "description": "ps110: An Ionic project"
+  "name": "PS 110 Events",
+  "description": "PS 110 Events"
 }

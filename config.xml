@@ -84,7 +84,7 @@
   <plugin name="cordova-plugin-dialogs" spec="~1.2.0"/>
 
   <plugin name="cordova-plugin-facebook4" spec="~1.7.1">
-    <variable name="APP_ID" value="1705139013080664"/>
+    <variable name="APP_ID" value="1789356161341649"/>
     <variable name="APP_NAME" value="ps110"/>
   </plugin>
   
