@@ -29,9 +29,9 @@
 
                 <div id="details-markdown1" style="margin-top:0px;color:#000000;">
 
-                    <span *ngIf="location!=='0'"><ion-icon ios="ios-pin-outline" md="ios-pin-outline"></ion-icon> {{ location }}</span>
-                    <span *ngIf="event_time!=='0'"><ion-icon ios="ios-time" md="md-time"></ion-icon> {{ event_time }}</span>
-                    <span *ngIf="event_duration!=='0'"><ion-icon ios="md-time" md="ios-time"></ion-icon> {{ event_duration }}</span>
+                    <span *ngIf="location!==''"><ion-icon ios="ios-pin-outline" md="ios-pin-outline"></ion-icon> {{ location }}</span>
+                    <span *ngIf="event_time!==''"><ion-icon ios="ios-time" md="md-time"></ion-icon> {{ event_time }}</span>
+                    <span *ngIf="event_duration!==''"><ion-icon ios="md-time" md="ios-time"></ion-icon> {{ event_duration }}</span>
 
                     
                 </div>
