@@ -33,3 +33,13 @@ The HTML, SCSS and JavaScript files are all located in app/pages/tutorial/ and t
 Facebook login is enabled by utilizing <a href="https://developers.facebook.com">Facebook Apps</a>. The configuration for the app to use can be found in config.xml at the 'cordova-plugin-facebook4' section.
 
 
+### Google Play Store Publishing
+
+# first time we generate a key that we can use for future app updates, don't lose
+keytool -genkey -v -keystore my-release-key.keystore -alias alias_name -keyalg RSA -keysize 2048 -validity 10000
+
+rm -f android-release-0.0.4.apk
+cordova build --release android
+jarsigner -verbose -sigalg SHA1withRSA -digestalg SHA1 -keystore ./platforms/android/my-release-key.keystore ./platforms/android/build/outputs/apk/android-release-unsigned.apk alias_name
+/Users/tty/Library/Android/sdk/build-tools/24.0.2/zipalign -v 4 ./platforms/android/build/outputs/apk/android-release-unsigned.apk android-release-0.0.4.apk
+
