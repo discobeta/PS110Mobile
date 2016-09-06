@@ -47,7 +47,7 @@ export class TutorialPage {
       {
         title: "How to use?",
         description: "Create your account and choose which classrooms you subscribe to. Each time that you start the app it would automatically check for updates. You can also manually update by pulling down from the top",
-        image: "img/logo.png",
+        image: "img/logo-white.png",
       }
     ];
   }
