@@ -4,7 +4,8 @@
 	    position: absolute;
     }
     ion-slide .slide-image {
-    	width: 100px;
+    	width: 70%;
+    	max-width: 350px;
     }
 	ion-slides {
 		position: absolute;
@@ -13,7 +14,7 @@
 	    font-weight: bold;
 	    color: #fff;
 	    text-shadow: 1px 1px 1px #000;
-	    background: #9933cc;
+	    background: #000066;
 	}
 	.slide-description {
 		color: #fff;
