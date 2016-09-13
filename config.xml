@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<widget id="com.les.ps110" version="0.0.4" android-versionCode="4" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
-  <name>PS110</name>
-  <description>An Ionic Framework and Cordova project.</description>
+<widget id="com.les.ps110" version="0.0.5" android-versionCode="5" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+  <name>PS110 Events</name>
+  <description>PS 110 Events.</description>
   <author email="ps110domains@gmail.com" href="http://ps110.org/">PS110 Team</author>
   <content src="index.html"/>
   <access origin="*"/>
