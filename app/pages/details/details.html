@@ -18,24 +18,26 @@
       <div class="day_name">{{day_name}}</div>
     </ion-col> 
     <br>
-                <h2>{{title}}</h2>
+
+      <div class="event_title_title">
+        {{title}}
+      </div>
+      <div class="event_title_time">
+
+<div *ngIf="days_hours_and_minutes[0]>1">
+{{ stringAsDate(start_date) | date }} 
+<span *ngIf="end_date!==''"> to {{ stringAsDate(end_date) | date }} </span>
+</div>
+<div *ngIf="days_hours_and_minutes[0]==0">
+{{ start_time }} - {{ end_time }}
+</div>
+
+      </div><br/>
                 <p>{{ description }}</p>
 
             </ion-item>
-            <div style="margin: 0px; line-height: 250px; text-align: center; background-color: rgb(232, 235, 239);">
-                <i class="icon ion-image" style="font-size: 64px; color: rgb(136, 136, 136); vertical-align: middle;"></i>
-            </div>
-            <div class="item item-body " id="details-list-item-container2">
+ 
 
-                <div id="details-markdown1" style="margin-top:0px;color:#000000;">
-
-                    <span *ngIf="location!==''"><ion-icon ios="ios-pin-outline" md="ios-pin-outline"></ion-icon> {{ location }}</span>
-                    <span *ngIf="event_time!==''"><ion-icon ios="ios-time" md="md-time"></ion-icon> {{ event_time }}</span>
-                    <span *ngIf="event_duration!==''"><ion-icon ios="md-time" md="ios-time"></ion-icon> {{ event_duration }}</span>
-
-                    
-                </div>
-            </div>
             <ion-item class="item-icon-left positive  " id="details-list-item10">
             This event is for 
 <div *ngFor="let cn of classroom" class="event_classroom">{{cn}}</div>

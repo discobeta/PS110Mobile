@@ -37,42 +37,44 @@ export class Page1 {
 
   // we listen to refresh calls from other pages, like list page
   listenToEvents() {
-    console.log('listening to events')
+    //console.log('listening to events')
     this.events.subscribe('reloadPage1', () => {
       this.refreshEvents()
     });
   }
 
-  viewEventDetails(id,month_name,day_number,day_name,title,description,location,start_date,end_date,event_duration,classroom) {
-    this.nav.push(DetailsPage, { id: id, month_name: month_name, day_number: day_number, day_name: day_name,title: title, description: description, location: location,start_date: start_date,end_date: end_date,event_duration:event_duration,classroom:classroom });
+  viewEventDetails(id,month_name,day_number,day_name,title,description,location,start_date,end_date,days_hours_and_minutes,classroom,start_time,end_time) {
+    console.log('viewEventDetails', start_time,end_time,days_hours_and_minutes)
+    this.nav.push(DetailsPage, { id: id, month_name: month_name, day_number: day_number, day_name: day_name,title: title, description: description, location: location,start_date: start_date,end_date: end_date,days_hours_and_minutes:days_hours_and_minutes,classroom:classroom,start_time:start_time,end_time:end_time });
   }
 
   onPageWillEnter() {
-  	console.log('page enter');
-    //this.nav.setRoot(this)
+  	//console.log('page enter');
   	this.refreshEvents()
   }
 
   doRefresh(refresher) {
-  	console.log('Refreshing!', refresher);
+  	//console.log('Refreshing!', refresher);
   	this.refreshEvents()
     setTimeout(() => {
-      console.log('Async operation has ended');
+      //console.log('Async operation has ended');
       refresher.complete();
     }, 2000);
 
+  }
+  
+  stringAsDate(dateStr) {
+    return new Date(dateStr);
   }
 
   refreshEvents() {
   	this._eventService.getEvents().subscribe(
         data => {
-        	console.log('data from events');
-        	console.log(data.json().results);
+        	//console.log('data from events');
         	this.foundEvents =  data.json().results
         },
         err => {
-        	console.log('could not refresh events');
-
+        	//console.log('could not refresh events');
         	Dialogs.alert('Could not get events. Please try again','Event Pull Failed', 'Dismiss');
         	this.nav.push(SignoutPage);
         },

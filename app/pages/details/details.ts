@@ -22,6 +22,9 @@ export class DetailsPage {
 	public event_duration
 	public classroom
 	public event_time
+	public days_hours_and_minutes
+	public start_time
+	public end_time
 	datetime: string
 
   constructor(public nav: NavController, public navParams: NavParams) {
@@ -35,13 +38,14 @@ export class DetailsPage {
 	this.location = navParams.get("location")
 	this.start_date = navParams.get("start_date")
 	this.end_date = navParams.get("end_date")
-	this.event_duration = navParams.get("event_duration")
+	this.days_hours_and_minutes = navParams.get("days_hours_and_minutes")
 	this.classroom = navParams.get("classroom")
-	var datetime = this.start_date
-	var time = datetime.split('T')
-	this.event_time = time[1].replace('Z','')
+	this.start_time = navParams.get("start_time")
+	this.end_time = navParams.get("end_time")
   }
-
+  stringAsDate(dateStr) {
+    return new Date(dateStr);
+  }
   onPageWillEnter() {
 
   }

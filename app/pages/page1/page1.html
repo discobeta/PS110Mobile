@@ -9,8 +9,6 @@
 
 <ion-content padding class="page1">
 
-
-
   <ion-refresher
     refreshing-text="refreshing..."
     refreshing-spinner="circles"
@@ -19,7 +17,8 @@
     pulling-text="Pull to refresh...">
     <ion-refresher-content></ion-refresher-content>
   </ion-refresher>
-<ion-card *ngFor="let event of foundEvents" (click)="viewEventDetails(event.id,event.month_name,event.day_number,event.day_name,event.title,event.description,event.location,event.start_date,end_date,event.event_duration,event.classroom)" class="no-padding-left no-padding-right no-margin-left no-margin-right">
+
+<ion-card *ngFor="let event of foundEvents" (click)="viewEventDetails(event.id,event.month_name,event.day_number,event.day_name,event.title,event.description,event.location,event.start_date,event.end_date,event.days_hours_and_minutes,event.classroom,event.start_time,event.end_time)" class="no-padding-left no-padding-right no-margin-left no-margin-right">
   
   <ion-card-content>
   <ion-row>
@@ -37,7 +36,17 @@
       <div class="event_title_title">
         {{event.title}}
       </div>
+      <div class="event_title_time">
 
+<div *ngIf="event.days_hours_and_minutes[0]>1">
+  {{ stringAsDate(event.start_date) | date }} 
+  <span *ngIf="event.end_date!==''"> to {{ stringAsDate(event.end_date) | date }} </span>
+</div>
+<div *ngIf="event.days_hours_and_minutes[0]==0">
+  {{ event.start_time }} - {{ event.end_time }}
+</div>
+
+      </div>
       </ion-card-title>
       <span class="pull-right"><ion-icon name="ios-arrow-forward-outline"></ion-icon></span>
     </ion-col>

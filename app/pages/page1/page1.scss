@@ -8,13 +8,19 @@
 	}
 
 	.event_classroom { 
-		background: #ff6666 !important;
-		color: #ffffff;
+		background: #ffffff !important;
+		color: #333;
+		float: right;
+		width: auto;
+		min-width: 100px;
+		border: solid 2px #ff6666;
+
 	}	
 
 	.event_classroom.EVERYONE {
-		background: #eeeeee !important;
+		background: #ffffff !important;
 		color: #333;
+		border: solid 2px #cccccc;
 	}
 
 
@@ -35,7 +41,7 @@
 
 	.month_name {
 		text-align: center;
-		background: #ff0000;
+		background: #000066;
 		border-top-left-radius: 15px;
 		border-top-right-radius: 15px;
 		color: #ffffff;
@@ -89,6 +95,12 @@
 	}
 	.event_title_title {
 		margin-top:5px;
-
+		font-size: 80%;
+		font-weight: bold;
+		text-transform: uppercase;
 	}
+	.event_title_time {
+		font-size: 70%;
+	}
+
 }
