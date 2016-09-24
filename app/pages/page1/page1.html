@@ -4,10 +4,19 @@
     <ion-icon name="menu"></ion-icon>
   </button>
   <ion-title> <img src="img/logo-white.png" style="width: 50px" /> </ion-title>
+ 
+ <ion-buttons end>
+   <button (click)="gotoToday()">
+      <ion-icon name="calendar" id="calendar_icon"></ion-icon>
+
+   <span class="calendar_day">{{ (today | date).split(' ')[0]}} {{ (today | date).split(' ')[1].replace(',','') }}</span>
+   </button>
+ </ion-buttons>
+
   
 </ion-navbar>
 
-<ion-content padding class="page1">
+<ion-content padding class="page1" id="listScroll">
 
   <ion-refresher
     refreshing-text="refreshing..."

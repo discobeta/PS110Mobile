@@ -5,6 +5,8 @@ import {SignoutPage} from '../../pages/signout/signout';
 import {DetailsPage} from '../../pages/details/details';
 import {TutorialPage} from '../../pages/tutorial/tutorial';
 import {ListPage} from '../../pages/list/list';
+import { Component, ViewChild } from '@angular/core';
+import { Content } from 'ionic-angular';
 
 
 @Page({
@@ -17,10 +19,11 @@ export class Page1 {
   title: string
   icon: string
   component: any
+  today: string
 
   constructor(app: IonicApp, private _eventService: EventData, private nav: NavController, private events: Events) {
     this.listenToEvents()
-
+    this.today = new Date()
     this.pages = [
       { title: 'Tutorial', icon: 'help-buoy', component: TutorialPage },
       { title: 'Class Preferences', icon: 'ios-school', component: ListPage },
@@ -34,6 +37,10 @@ export class Page1 {
 //    this.checkPreviousAuthorization()
 
   public foundEvents;
+  @ViewChild(Content) content: Content;
+  gotoToday() {
+    this.content.scrollToTop();
+  }
 
   // we listen to refresh calls from other pages, like list page
   listenToEvents() {

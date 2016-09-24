@@ -20,7 +20,7 @@ export class UserData {
       let headers = new Headers({ 'Content-Type': 'application/x-www-form-urlencoded', 'Accept': 'application/json' });
       let options = new RequestOptions({ headers: headers });
 
-      return this.http.post('http://192.168.1.18:8000/api/facebook_auth/?format=json', body, options)
+      return this.http.post('http://ps110.org/api/facebook_auth/?format=json', body, options)
           .map(res => res.json())
           .catch(this.handleLoginError);
   }
@@ -31,7 +31,7 @@ export class UserData {
       let headers = new Headers({ 'Content-Type': 'application/x-www-form-urlencoded', 'Accept': 'application/json' });
       let options = new RequestOptions({ headers: headers });
 
-      return this.http.post('http://192.168.1.18:8000/api-token-auth/?format=json', body, options)
+      return this.http.post('http://ps110.org/api-token-auth/?format=json', body, options)
           .map(res => res.json())
           .catch(this.handleLoginError);
   }
@@ -45,7 +45,7 @@ export class UserData {
       let headers = new Headers({ 'Content-Type': 'application/x-www-form-urlencoded', 'Accept': 'application/json' });
       let options = new RequestOptions({ headers: headers });
 
-      return this.http.post('http://192.168.1.18:8000/api/register/?format=json', body, options)
+      return this.http.post('http://ps110.org/api/register/?format=json', body, options)
           .map(res => res.json())
           .catch(this.handleLoginError);
   }

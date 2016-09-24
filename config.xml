@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<widget id="com.les.ps110" version="0.0.5" android-versionCode="5" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
-  <name>PS110Events</name>
+<widget id="com.les.ps110" version="0.0.6" android-versionCode="6" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+  <name>PS110</name>
   <description>PS 110 Events.</description>
   <author email="ps110domains@gmail.com" href="http://ps110.org/">PS110 Team</author>
   <content src="index.html"/>
@@ -11,7 +11,7 @@
   <allow-intent href="sms:*"/>
   <allow-intent href="mailto:*"/>
   <allow-intent href="geo:*"/>
-  <allow-navigation href="http://192.168.1.18:8000/*"/>
+  <allow-navigation href="http://ps110.org/*"/>
   <platform name="android">
     <allow-intent href="market:*"/>
     <icon src="resources/android/icon/drawable-ldpi-icon.png" density="ldpi"/>
