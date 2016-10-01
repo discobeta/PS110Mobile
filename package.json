@@ -11,6 +11,7 @@
     "ionic-angular": "2.0.0-beta.7",
     "ionic-native": "^1.1.0",
     "ionicons": "3.0.0",
+    "moment": "^2.15.1",
     "reflect-metadata": "^0.1.3",
     "rxjs": "5.0.0-beta.6",
     "zone.js": "^0.6.12"
@@ -37,7 +38,7 @@
     {
       "variables": {
         "APP_ID": "1789356161341649",
-        "APP_NAME": "PS 110 Events"
+        "APP_NAME": "PS110"
       },
       "locator": "cordova-plugin-facebook4",
       "id": "cordova-plugin-facebook4"
@@ -51,6 +52,6 @@
       "locator": "ios"
     }
   ],
-  "name": "PS 110 Events",
+  "name": "PS110",
   "description": "PS 110 Events"
 }

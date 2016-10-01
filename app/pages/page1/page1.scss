@@ -9,11 +9,13 @@
 
 	.event_classroom { 
 		background: #ffffff !important;
+		opacity: 0.7;
 		color: #333;
 		float: right;
 		width: auto;
-		min-width: 100px;
+		min-width: 80px;
 		border: solid 2px #ff6666;
+		padding-top: 0px;
 
 	}	
 
@@ -38,7 +40,7 @@
 	.no-margin-right {
 		margin-right: 0px;
 	}
-
+	.no-padding { padding: 0px 0px 0px 0px;}
 	.month_name {
 		text-align: center;
 		background: #000066;
@@ -95,9 +97,10 @@
 	}
 	.event_title_title {
 		margin-top:5px;
-		font-size: 80%;
+		font-size: 70%;
 		font-weight: bold;
 		text-transform: uppercase;
+		margin-bottom: 5px;
 	}
 	.event_title_time {
 		font-size: 70%;
@@ -106,5 +109,9 @@
 		
 	}
 	.calendar_day {
+	}
+	.event_duration_dates {
+		font-size: 13px;
+		color: #444444;
 	}
 }

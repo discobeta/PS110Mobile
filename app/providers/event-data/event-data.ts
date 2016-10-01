@@ -19,21 +19,18 @@ export class EventData {
   public RequestOptions;
 
   subscribeClassroom(classroom_id){
-      console.log('called subscribeClassroom'+classroom_id);
       let headers = new Headers({ 'Content-Type': 'application/json', 'Authorization': 'JWT ' + window.localStorage.getItem('token') });
       let options = new RequestOptions({ headers: headers });
       return this.http.get('http://ps110.org/api/classrooms/'+classroom_id+'/subscribe/?format=json', options);
   }
 
   unsubscribeClassroom(classroom_id){
-      console.log('called unsubscribeClassroom'+classroom_id);
       let headers = new Headers({ 'Content-Type': 'application/json', 'Authorization': 'JWT ' + window.localStorage.getItem('token') });
       let options = new RequestOptions({ headers: headers });
       return this.http.get('http://ps110.org/api/classrooms/'+classroom_id+'/unsubscribe/?format=json', options);
   } 
 
   getClassrooms() {
-      console.log('called getClasses');
       let headers = new Headers({ 'Content-Type': 'application/json', 'Authorization': 'JWT ' + window.localStorage.getItem('token') });
       let options = new RequestOptions({ headers: headers });
       return this.http.get('http://ps110.org/api/classrooms/?format=json', options)
@@ -42,7 +39,6 @@ export class EventData {
   }
 
   getEventDetails(id) {
-      console.log('called getEventDetails using token ' + window.localStorage.getItem('token'));
       let headers = new Headers({ 'Content-Type': 'application/json', 'Authorization': 'JWT ' + window.localStorage.getItem('token') });
       let options = new RequestOptions({ headers: headers });
       return this.http.get('http://ps110.org/api/events/'+id+'/?format=json', options)
@@ -51,7 +47,6 @@ export class EventData {
   }
 
   getEvents() {
-      console.log('called getEvents using token ' + window.localStorage.getItem('token'));
       let headers = new Headers({ 'Content-Type': 'application/json', 'Authorization': 'JWT ' + window.localStorage.getItem('token') });
       let options = new RequestOptions({ headers: headers });
       return this.http.get('http://ps110.org/api/events/?format=json', options)

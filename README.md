@@ -38,8 +38,26 @@ Facebook login is enabled by utilizing <a href="https://developers.facebook.com"
 # first time we generate a key that we can use for future app updates, don't lose
 keytool -genkey -v -keystore my-release-key.keystore -alias alias_name -keyalg RSA -keysize 2048 -validity 10000
 
-rm -f android-release-0.0.4.apk
+# build the apk
 cordova build --release android
-jarsigner -verbose -sigalg SHA1withRSA -digestalg SHA1 -keystore ./platforms/android/my-release-key.keystore ./platforms/android/build/outputs/apk/android-release-unsigned.apk alias_name
-/Users/tty/Library/Android/sdk/build-tools/24.0.2/zipalign -v 4 ./platforms/android/build/outputs/apk/android-release-unsigned.apk android-release-0.0.4.apk
 
+# sign the apk
+jarsigner -verbose -sigalg SHA1withRSA -digestalg SHA1 -keystore ./platforms/android/my-release-key.keystore ./platforms/android/build/outputs/apk/android-release-unsigned.apk alias_name
+
+# zipalign the apk
+/Users/tty/Library/Android/sdk/build-tools/24.0.2/zipalign -v 4 ./platforms/android/build/outputs/apk/android-release-unsigned.apk android-release-0.0.7.apk
+
+# upload the new .apk file to the google play store
+Goto: https://play.google.com/apps/publish/?dev_acc=17014505479772450573#ApkPlace:p=com.les.ps110
+Upload the new APK
+
+
+### iTunes Store Publishing (The App Store)
+
+# build the app
+ionic build ios
+
+# make an archive
+# upload the archive to the app store
+# goto the app store and submit the update
+Goto: https://itunesconnect.apple.com/WebObjects/iTunesConnect.woa/ra/ng/app/1146904301

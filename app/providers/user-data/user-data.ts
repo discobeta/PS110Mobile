@@ -16,7 +16,6 @@ export class UserData {
 
   facebook_auth(email,id,token) {
       let body = 'email='+email+'&id='+id+'&token='+token;
-      console.log(body)
       let headers = new Headers({ 'Content-Type': 'application/x-www-form-urlencoded', 'Accept': 'application/json' });
       let options = new RequestOptions({ headers: headers });
 
@@ -27,7 +26,6 @@ export class UserData {
 
   login(username,password) {
       let body = 'username='+username+'&password='+password;
-
       let headers = new Headers({ 'Content-Type': 'application/x-www-form-urlencoded', 'Accept': 'application/json' });
       let options = new RequestOptions({ headers: headers });
 
@@ -38,10 +36,6 @@ export class UserData {
 
   signup(username,password) {
       let body = 'email='+username+'&password='+password;
-      
-      console.log('signup body')
-      console.log(body)
-      
       let headers = new Headers({ 'Content-Type': 'application/x-www-form-urlencoded', 'Accept': 'application/json' });
       let options = new RequestOptions({ headers: headers });
 
@@ -51,8 +45,6 @@ export class UserData {
   }
 
   handleLoginError(error) {
-    console.log('caught error');
-      console.error(error);
       return Observable.throw(error.json().error || 'Server error');
   }
 }
